@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Jogo</string>
+
+    <string name="title">QUEM QUER SER MILIONÁRIO</string>
+    <string name="action_settings">Settings</string>
+    <string name="play">Jogar</string>
+    <string name="exit">Sair</string>
+    <string name="title_activity_perguntas">perguntas</string>
+
+    <string name="pergunta">Pergunta</string>
+    <string name="perdeu">Fim do Jogo</string>
+    <string name="menu">Voltar ao menu principal</string>
+</resources>
