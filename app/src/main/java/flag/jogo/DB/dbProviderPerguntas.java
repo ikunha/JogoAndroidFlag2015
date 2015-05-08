@@ -10,8 +10,6 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.net.Uri;
 
-import java.security.Provider;
-
 
 public class dbProviderPerguntas extends ContentProvider{
 
@@ -58,15 +56,22 @@ public class dbProviderPerguntas extends ContentProvider{
     public Uri insert(Uri uri, ContentValues values)
     {
         SQLiteDatabase db = helper.getWritableDatabase();
+
+        ContentValues pergunta = new ContentValues();
+        pergunta.put();
+
         try
         {
             long row = db.insert(dbContract.MyConstants.DATABASE_TABLE, null, values);
+
             return (row != -1) ? null : ContentUris.withAppendedId(uri, row);
         }
         finally
         {
             db.close();
         }
+
+
     }
 
     @Override
@@ -93,14 +98,13 @@ public class dbProviderPerguntas extends ContentProvider{
         }
     }
 
-    // falta inserir a parte da tabela das respostas tambem
-
     @Override
     public int delete(Uri uri, String selection, String[] selectionArgs)
     {
         SQLiteDatabase db = helper.getWritableDatabase();
         try
         {
+            db.delete(dbContract.MyConstants.DATABASE_TABLE2, selection, selectionArgs);
             return db.delete(dbContract.MyConstants.DATABASE_TABLE, selection, selectionArgs);
         }
         finally

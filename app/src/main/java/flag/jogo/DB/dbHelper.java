@@ -12,15 +12,15 @@ public class dbHelper extends SQLiteOpenHelper {
     }
 
     private static final String DATABASE_CREATE_PERGUNTAS = "create table" +
-            dbContract.MyConstants.DATABASE_TABLE + " ("
-            + dbContract.MyConstants.KEY_ID_PERGUNTAS +
-            " integer primary key autoincrement, " +
+            dbContract.MyConstants.DATABASE_TABLE + " (" +
+            dbContract.MyConstants.AUT_ID_PERGUNTAS + " integer primary key autoincrement, " +
+            dbContract.MyConstants.ID_PERGUNTAS + " text not null, " +
             dbContract.MyConstants.PERGUNTA + " text not null;";
 
     private static final String DATABASE_CREATE_RESPOSTAS = "create table" +
-            dbContract.MyConstants.DATABASE_TABLE2 + " ("
-            + dbContract.MyConstants.KEY_ID_RESPOSTAS +
-            " integer primary key autoincrement, " +
+            dbContract.MyConstants.DATABASE_TABLE2 + " (" +
+            dbContract.MyConstants.AUT_ID_RESPOSTAS + " integer primary key autoincrement, " +
+            dbContract.MyConstants.ID_RESPOSTAS + " text not null, " +
             dbContract.MyConstants.OPCOES + " text not null, " +
             dbContract.MyConstants.CORRECTO +" text not null;";
 
@@ -33,6 +33,9 @@ public class dbHelper extends SQLiteOpenHelper {
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int oldVersion, int newVersion) {
         sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + dbContract.MyConstants.DATABASE_TABLE);
+        //onCreate(sqLiteDatabase);
+
+        sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + dbContract.MyConstants.DATABASE_TABLE2);
         onCreate(sqLiteDatabase);
     }
 

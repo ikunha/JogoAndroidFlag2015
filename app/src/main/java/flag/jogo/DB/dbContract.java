@@ -10,8 +10,10 @@ public class dbContract {
         public static final String DATABASE_TABLE = "perguntas_table";
         public static final String DATABASE_TABLE2 = "respostas_table";
         public static final int DATABASE_VERSION = 1;
-        public static final String KEY_ID_PERGUNTAS = "_id";
-        public static final String KEY_ID_RESPOSTAS = "_id";
+        public static final String AUT_ID_PERGUNTAS = "_id";
+        public static final String AUT_ID_RESPOSTAS = "_id";
+        public static final String ID_PERGUNTAS = "_Id";
+        public static final String ID_RESPOSTAS = "_Id";
         public static final String PERGUNTA = "pergunta";
         public static final String OPCOES = "opcoes";
         public static final String CORRECTO = "correcto";
