@@ -7,7 +7,25 @@
     <string name="exit">Sair</string>
     <string name="title_activity_perguntas">perguntas</string>
 
+    // paginas
+
     <string name="pergunta">Pergunta</string>
     <string name="perdeu">Fim do Jogo</string>
     <string name="menu">Voltar ao menu principal</string>
+
+    // botoes respostas
+
+    <string name="opcaoA">A</string>
+    <string name="opcaoB">B</string>
+    <string name="opcaoC">C</string>
+    <string name="opcaoD">D</string>
+
+    // botoes ajudas
+
+    <string name="chamada">Chamada</string>
+    <string name="cinquenta">50/50</string>
+    <string name="publico">Público</string>
+
+
+
 </resources>

@@ -22,8 +22,14 @@
         </activity>
         <activity
             android:name=".perdeu"
-            android:label="@string/title_activity_perdeu" >
+            android:label="Perdeu" >
         </activity>
+
+        <service
+            android:name=".buscarPerguntas"
+            android:enabled="true"
+            android:exported="true" >
+        </service>
     </application>
 
 </manifest>
