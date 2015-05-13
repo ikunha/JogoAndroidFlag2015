@@ -6,6 +6,8 @@
     <string name="play">Jogar</string>
     <string name="exit">Sair</string>
     <string name="title_activity_perguntas">perguntas</string>
+    <string name="toast_game_over">Perdeu</string>
+    <string name="toast_won_game">Ganhou</string>
 
     // paginas
 
